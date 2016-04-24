@@ -61,19 +61,26 @@ nav a.vselected {
 
 article {
     padding: 5px 5px 5px 5px;
-    margin: 10px;
+    margin: auto;
     width: 750px;
 }
 
-h1 {
+article h1 {
     margin: 0;
-    padding: 5px;
-    background-color: #444;
-    color: white;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    color: #444444;
     font-size: 16px;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: #399299;
+}
+
+article h2 {
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    color: #444444;
+    font-size: 14px;
 }
 
 span.ftitle {
@@ -89,8 +96,9 @@ span.ftitle1 {
 }
 
 span.footer {
-    font-size: 14px;
-    color: #ffffff;
+    font-size: 12px;
+    font-style: normal;
+    color: #eeeeee;
     line-height: 0%
 }
 
@@ -135,11 +143,39 @@ div.snav nav {
 
 #section {
     background-color: #ffffff;
-    width: 799px;
+    width: 100%;
     float: left;
     border-left-style: dotted;
     border-left-width: 1px;
     border-left-color: #444;
+}
+
+#coaches {
+    padding-top: 30px;
+    padding-bottom: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    border: 0px solid #73AD21;
+}
+
+.coach {
+    background-color: darkcyan;
+    color: white;
+    float: left;
+    width: 150px;
+    height: 180px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#gmap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+    border: 0px solid #73AD21;
 }
 
 div.hnav {
@@ -186,8 +222,8 @@ form div textarea {
 
 #footer {
     padding: 5px 5px 5px 25px;
-    background-color: black;
-    height: 300px;
+    background-color: #444444;
+    height: 200px;
     color: white;
     clear: both;
     text-align: left;

@@ -2,86 +2,95 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="Generator" content="EditPlus®">
+    <meta name="Generator" content="WebStorm®">
     <meta name="Author" content="">
     <meta name="Keywords" content="">
     <meta name="Description" content="">
     <link rel="stylesheet" type="text/css" href="home.css"/>
+    <script>
+        function showDiv() {
+            document.getElementById("hnav").style.display = "none";
+        }
+    </script>
 </head>
 
 <body>
 <div class="container">
-
+    <div style="position: absolute; left: 380px;"><a href="home.html"><img src="image/brand.png"></a></div>
     <div class="hnav">
         <nav>
-            <a href="home.html">Home</a>
-            <a href="property.html">Property</a>
+            <a href="club.html">Our Club</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="membership.html">Membership</a>
             <a class="selected" href="contact.html">Contact</a>
-            <a href="sitemap.html">Site Map</a>
-        </nav>
-    </div>
-
-    <div id="header">
-    </div>
-
-    <div class="snav">
-        <nav>
-            <a class="sidebar" href="home.html">Home</a>
-            <a class="sidebar" href="property.html">Property</a>
-            <a class="sidebar vselected" href="contact.html">Contact</a>
-            <a class="sidebar" href="sitemap.html">Site Map</a>
         </nav>
     </div>
 
     <div id="section">
-        <div class="form">
-            <h1>Send a Message</h1>
-            <form method="post" action="">
-                <div><span>First Name:</span><input type="text" name="FirstName"></div>
-                <div><span>Last Name:</span><input type="text" name="LastName"></div>
-                <div><span>Phone:</span><input type="text" name="Phone"></div>
-                <div><span>Email:</span><input type="text" name=""></div>
-                <div><span>Property Type: </span>
-                    <select name="type">
-                        <option value="House" selected>House</option>
-                        <option value="Condo">Condo</option>
-                    </select>
+        <article>
+            <h1>Contact Us</h1>
+            <p>Here are the various ways you can contact us:</p>
+            <ul>
+                <li>Telephone:(613) 542-2467</li>
+                <li>Address:45 Napier Street, Kingston, Ontario</li>
+                <li>Postal address:P.O. Box 621, Kingston, Ontario, K7L 4X1</li>
+                <li>General E-mail:<a href="mailto:ktc@kingstontennisclub.com" target="_self">Email us</a></li>
+                <li>Webmaster:<a href="mailto:postmaster@kingstontennisclub.com" target="_self">Email us</a></li>
+            </ul>
+        </article>
+        <div id="gmap">
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+            <div style='overflow:hidden;height:500px;width:750px;'>
+                <div id='gmap_canvas' style='height:500px;width:750px;'></div>
+                <div>
+                    <small><a href="http://embedgooglemaps.com"> embedgooglemaps.com </a></small>
                 </div>
-                <div><span>Bedrooms:</span><input type="text" name=""></div>
-                <div><span>Bathrooms:</span><input type="text" name=""></div>
-                <div><span>Price Range:</span>
-                    <select name="price">
-                        <option value="low" selected>50,000 - 100,000</option>
-                        <option value="middle">100,000 - 500,000</option>
-                        <option value="heigh">500,000 - 1,000,000</option>
-                    </select></div>
-                <div><span>Additional Comments:</span><textarea name="comment" rows="8" cols="8"></textarea></div>
-                <input type="reset">
-                <input type="submit" value="Submit">
-            </form>
+                <div>
+                    <small><a href="http://celebwiki.org/">celebwiki.org</a></small>
+                </div>
+                <style>#gmap_canvas img {
+                    max-width: none !important;
+                    background: none !important
+                }</style>
+            </div>
+            <script type='text/javascript'>function init_map() {
+                var myOptions = {
+                    zoom: 10,
+                    center: new google.maps.LatLng(44.2289963, -76.50610940000001),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(44.2289963, -76.50610940000001)
+                });
+                infowindow = new google.maps.InfoWindow({content: '<strong>Kingston Tennis Club</strong><br>45 Napier Street, Kingston, ON K7L 4X1<br>'});
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.open(map, marker);
+                });
+                infowindow.open(map, marker);
+            }
+            google.maps.event.addDomListener(window, 'load', init_map);</script>
         </div>
     </div>
 
     <div class="hnav">
         <nav>
-            <a href="home.html">Home</a>
-            <a href="property.html">Property</a>
+            <a href="club.html">Our Club</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="membership.html">Membership</a>
             <a class="selected" href="contact.html">Contact</a>
-            <a href="sitemap.html">Site Map</a>
         </nav>
     </div>
 
     <div id="footer">
-        <img src="image/footerlogos.png" width="274" height="100" border="0" alt=""><br/>
-        <span class="ftitle">HomeLife/Realty One Ltd.</span><br/>
-        Real Estate Brokerage* <br/>
-        501 Parliament St. Toronto, ON M4X 1P3<br/>
-        <span class="ftitle">Mobile:</span><span class="footer"> 647.225.2426</span><br/>
-        <span class="ftitle">Business:</span><span class="footer"> 416.922.5533</span><br/>
-        <span class="ftitle">Fax:</span><span class="footer"> 416.922.5808</span><br/>
-        <span class="ftitle">E-mail:</span><span class="footer"> kat@katanderson.ca</span><br/>
-        *Independently owned and operated, REALTOR®<br/>
-        DISCLAIMER: Not intended to solicit currently listed properties or buyers under contract.<br/>
+        <span class="footer">The Kingston Tennis Club</span><br/>
+        <span class="footer">45 Napier Street, P.O. Box 621</span><br/>
+        <span class="footer">Kingston, ON K7L 4X1</span><br/>
+        <span class="footer">Phone: 613-542-2467</span><br/>
+        <span class="footer">ktc@kingstontenniesclub.com</span><br/>
+        <p/>
+        <span class="footer">© 2016 Kingston Tennis Club. All rights reserved.</span><br/>
     </div>
 </div>
 
