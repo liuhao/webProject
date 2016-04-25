@@ -7,7 +7,7 @@ function validateName() {
     var firstName = document.getElementById("fname");
     var lastName = document.getElementById("lname");
     var name = firstName.value + lastName.value;
-    var namerror=document.getElementById("nameerror");
+    var nameError=document.getElementById("nameError");
     try {
         if (/.{4,}/.test(name) === false) {
             throw "Name must be at least 4 characters long";
@@ -17,8 +17,8 @@ function validateName() {
         // remove any username error styling and message
         firstName.style.background = "";
         lastName.style.background = "";
-        namerror.style.display = "none";
-        namerror.innerHTML = "";
+        nameError.style.display = "none";
+        nameError.innerHTML = "";
         // copy valid username value to profile object
         profile.username = name;
         // copy profile.username value to profile section
@@ -28,8 +28,8 @@ function validateName() {
         document.getElementById("usernameSection").style.display = "block";
     }
     catch (msg) {
-        namerror.style.display = "block";
-        namerror.innerHTML = msg;
+        nameError.style.display = "block";
+        nameError.innerHTML = msg;
         // change input style
         firstName.style.background = "rgb(255,233,233)";
         lastName.style.background = "rgb(255,233,233)";
