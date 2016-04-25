@@ -6,17 +6,17 @@
     <meta name="Author" content="">
     <meta name="Keywords" content="">
     <meta name="Description" content="">
-    <link rel="stylesheet" type="text/css" href="home.css"/>
-    <script>
-        function showDiv() {
-            document.getElementById("hnav").style.display = "none";
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="css/helpTip.css"/>
+    <link rel="stylesheet" type="text/css" href="css/membership.css"/>
+    <script src="js/baguettebox.js"></script>
+    <script src="js/screenInfo.js"></script>
 </head>
 
 <body>
 <div class="container">
-    <div style="position: absolute; left: 380px;"><a href="home.html"><img src="image/brand.png"></a></div>
+    <div id="home"><a href="home.html"><img src="image/brand.png"></a></div>
+    <div id="screen"></div>
     <div class="hnav">
         <nav>
             <a href="club.html">Our Club</a>
@@ -60,6 +60,36 @@
             <h2>Junior</h2>
             Under 18 Years of Age at the time of membership purchase.<br/>
         </article>
+
+        <form>
+            <fieldset  id="all">
+                <legend>Account Profile</legend>
+                <div class="label"><label for="fname">First Name</label><input id="fname"></div>
+                <label for="lname" >Last Name</label><input id="lname">
+                <P id="nameerror" ></P><br>
+                <label for="email">Email</label><input id="email"><br>
+                <p id="emailerror"></p>
+                <label for="password">Password</label><input id="password">At lease 8 characters <br>
+                <label for="rePassword">Re-Type Password</label><input id="rePassword">
+                <p id="passworderror" ></p><br>
+                <label for="checkbox">Registration Type</label>
+                <div id="checkbox">
+                    <input style="display: inline" name="typeCheck" type="checkbox" value="adult">Adult - $368
+                    <input style="display: inline" name="typeCheck" type="checkbox" value="couple">Couple - $473
+                    <input style="display: inline" name="typeCheck" type="checkbox" value="family">Family - $627
+                    <input style="display: inline"  name="typeCheck" type="checkbox" value="junior">Junior - $198
+                </div>box
+                <label for="male">Gender</label>l
+                <div id="gender">
+                    <input style="display: inline"  name="gender" id="male" type="radio" value="male">Male
+                    <input style="display: inline"  name="gender" id="female" type="radio" value="female">Female
+                </div>
+                <label for="level">Briefly describe </label>
+                <textarea  style="display: inline "  id="level" placeholder=" --> Please briefly describe your tennis background and this will help us plan events,etc --> " ></textarea>
+                <br><input style="display: inline"  id="submit" type="submit" value="Submit">
+                <input style="display: inline " id="clear"  type="reset" value="reset">
+            </fieldset>
+        </form>
     </div>
 
     <div class="hnav">
