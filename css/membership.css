@@ -23,6 +23,11 @@ div #output {
 div.item {
     width: 400px;
 }
+div.error {
+    width: 400px;
+    text-align: right;
+    color: red;
+}
 
 div.label {
     float: left;
