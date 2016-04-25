@@ -14,6 +14,7 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/baguettebox.js"></script>
     <script src="js/screenInfo.js"></script>
+    <script src="js/membership.js"></script>
     <script>
         $(function() {
             $( "#datepicker" ).datepicker({
@@ -75,27 +76,23 @@
             <form method="post" action="">
                 <div class="item">
                     <div class="label">First Name:</div>
-                    <div class="input"><input type="text" name="FirstName"></div>
+                    <div class="input"><input id="fname" type="text" name="FirstName"></div>
                 </div>
-                <div class="error" id="fnameError"></div>
-
                 <div class="item">
                     <div class="label">Last Name:</div>
-                    <div class="input"><input type="text" name="LastName"></div>
+                    <div class="input"><input id="lname" type="text" name="LastName"></div>
                 </div>
-                <div class="error" id="lnameError"></div>
+                <div class="error" id="nameError"></div>
 
                 <div class="item">
                     <div class="label">Password:</div>
-                    <div class="input"><input type="text" name="password"></div>
+                    <div class="input"><input id="password" type="text" name="password"></div>
                 </div>
-                <div class="error" id="passwordError"></div>
-
                 <div class="item">
                     <div class="label">Re-Type Password:</div>
-                    <div class="input"><input type="text" name="rePassword"></div>
+                    <div class="input"><input id="rePassword" type="text" name="rePassword"></div>
                 </div>
-                <div class="error" id="repasswordError"></div>
+                <div class="error" id="passworderror"></div>
 
                 <div class="item">
                     <div class="label">Birthday:</div>
@@ -104,16 +101,10 @@
                 <div class="error" id="birthdayError"></div>
 
                 <div class="item">
-                    <div class="label">Phone:</div>
-                    <div class="input"><input type="text" name="Phone"></div>
-                </div>
-                <div class="error" id="phoneError"></div>
-
-                <div class="item">
                     <div class="label">Email:</div>
-                    <div class="input"><input type="text" name=""></div>
+                    <div class="input"><input id="email" type="text" name=""></div>
                 </div>
-                <div class="error" id="emailError"></div>
+                <div class="error" id="emailerror"></div>
 
                 <div class="item">
                     <div class="label">Training Plan:</div>
@@ -136,10 +127,25 @@
 
                 <div class="item">
                     <div><input class="button" type="reset"></div>
-                    <div><input class="button" type="submit" value="Submit"></div>
+                    <div><input class="button" id="submit" type="submit" value="Submit"></div>
                 </div>
             </form>
-            <div id="output"></div>
+            <div id="profile">
+                <h3>Profile</h3>
+                <div id="usernameSection">
+                    <h4>Username</h4>
+                    <p id="profileUsername"></p>
+                </div>
+                <div id="emailSection">
+                    <h4>Email address</h4>
+                    <p id="profileEmail"></p>
+                </div>
+                <div id="lodgingsSection">
+                    <h4>Preferred Lodgings</h4>
+                    <ul id="profileLodgings"></ul>
+                </div>
+
+            </div>
         </div>
     </div>
 

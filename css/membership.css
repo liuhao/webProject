@@ -12,8 +12,8 @@ div form {
     float: left;
 }
 
-div #output {
-    display: none;
+div #profile {
+    display: block;
     float: right;
     padding: 5px;
     width: 280px;
