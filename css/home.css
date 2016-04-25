@@ -190,36 +190,6 @@ div.hnav {
     padding: 10px;
 }
 
-div.form {
-    width: 600px;
-    padding: 30px 30px 30px 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-form div {
-    margin: 10px 10px 10px 10px;
-}
-
-form div span {
-    display: inline-block;
-    width: 120px;
-}
-
-form div select {
-    width: 200px;
-}
-
-form div input {
-    width: 200px;
-}
-
-form div textarea {
-    width: 200px;
-    height: 120px;
-    vertical-align: top;
-}
-
 #footer {
     padding: 5px 5px 5px 25px;
     background-color: #444444;
