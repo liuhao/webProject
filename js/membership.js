@@ -107,6 +107,32 @@ function registerPlan(event) {
     }
 }
 
+function validateBirthday() {
+    var birthdayError = document.getElementById("birthdayError");
+    var birthdayInput = new Date(document.getElementById("datepicker").value);
+    try {
+      if (isNaN(birthdayInput.getTime())) {
+            throw "Date format is MM/DD/YYYY";
+        } else if (birthdayInput.getTime() > new Date().getTime()) {
+            throw "Birthday must before today";
+      }
+        // remove any password error styling and message
+        birthdayError.style.display = "none";
+        birthdayError.innerHTML = "";
+        var days=Math.floor((new Date().getTime() - birthdayInput.getTime())/(24*3600*1000));
+        var year = Math.floor(days/365);
+        var month = Math.floor((days - (year * 365)) / 30);
+        var day = days - (year * 365) - (month * 30);
+        profile.age = year + " years, " + month + " months, " + day + " days";
+        document.getElementById("profileAge").innerHTML = profile.age;
+    }
+    catch (msg) {
+        // display error message
+        birthdayError.style.display = "block";
+        birthdayError.innerHTML = msg;
+    }
+}
+
 function convertToString() {
     arrayString = plans.toString();
     objectString = JSON.stringify(profile);
@@ -121,13 +147,16 @@ function calTotalFee() {
         var Input = document.getElementById("lname");
         var emailInput = document.getElementById("email");
         var pw2Input = document.getElementById("rePassword");
+        var birthdayInput = document.getElementById("datepicker");
         
         if (Input.addEventListener) {
             Input.addEventListener("change", validateName, false);
             emailInput.addEventListener("change", validateEmail, false);
             pw2Input.addEventListener("change", validatePassword, false);
+            birthdayInput.addEventListener("change", validateBirthday, false);
         } else if (Input.attachEvent) {
             Input.attachEvent("onchange", validateName);
+            birthdayInput.attachEvent("onchange", validateBirthday);
         }
 
         var button = document.getElementById("submit");
